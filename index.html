@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kapoor Motors Master</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f4f6f8;
+color:#111;
+scroll-behavior:smooth;
+padding-bottom:70px;
+}
+
+/* HEADER */
+header{
+background:white;
+padding:14px 18px;
+display:flex;
+justify-content:space-between;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+position:fixed;
+top:0;width:100%;z-index:999;
+}
+header .name{font-weight:600;font-size:18px}
+.badge{background:#16a34a;color:white;padding:4px 8px;border-radius:6px;font-size:12px}
+
+/* HERO */
+.hero{
+height:65vh;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-align:center;
+background-size:cover;
+background-position:center;
+animation:slider 15s infinite;
+}
+@keyframes slider{
+0%{background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1580273916550-e323be2ae537')}
+50%{background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9')}
+100%{background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1625047509248-ec889cbff17f')}
+}
+.hero h2{font-size:30px}
+
+/* SECTION */
+.section{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+opacity:0;
+transform:translateY(40px);
+transition:.6s;
+}
+.section.show{opacity:1;transform:translateY(0)}
+.title{color:#ff2b2b;font-size:22px;margin-bottom:12px}
+
+/* CARD */
+.card{
+background:white;
+padding:18px;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+margin-bottom:18px;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:10px;
+}
+.service{
+background:#f3f4f6;
+padding:12px;
+border-radius:8px;
+text-align:center;
+font-weight:600;
+}
+
+/* PRICE */
+.row{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid #eee;
+}
+
+/* GALLERY */
+.gallery{
+display:flex;
+gap:10px;
+overflow-x:auto;
+}
+.gallery img{
+height:130px;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* POPUP VIEWER */
+.viewer{
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,.8);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+.viewer img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
+
+/* FORM */
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+button{
+width:100%;
+padding:12px;
+background:#ff2b2b;
+border:none;
+color:white;
+margin-top:10px;
+cursor:pointer;
+}
+
+/* FLOAT BUTTONS */
+.callbtn,.whatsapp{
+position:fixed;
+right:20px;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+font-size:18px;
+}
+.callbtn{bottom:80px;background:#16a34a;}
+.whatsapp{bottom:140px;background:#25D366;}
+
+/* BOTTOM NAV */
+.bottomNav{
+position:fixed;
+bottom:0;
+width:100%;
+background:#111;
+display:flex;
+justify-content:space-around;
+padding:12px 0;
+}
+.bottomNav a{color:white;text-decoration:none;font-size:13px}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="name">Kapoor Motors <span class="badge">⭐ 4.0 Verified</span></div>
+<div>🕒 Open 24 Hrs</div>
+</header>
+
+<section class="hero">
+<h2>Premium Automobile Repair & Service</h2>
+</section>
+
+<div class="section">
+<div class="title">Our Services</div>
+<div class="services">
+<div class="service">Car Repair</div>
+<div class="service">Car Wash</div>
+<div class="service">AC Repair</div>
+<div class="service">Diagnostics</div>
+<div class="service">Wheel Alignment</div>
+<div class="service">Towing</div>
+</div>
+</div>
+
+<div class="section">
+<div class="card">
+<div class="title">Price List</div>
+<div class="row"><span>Car Wash Service</span><span>₹250</span></div>
+<div class="row"><span>General Service</span><span>₹1500</span></div>
+<div class="row"><span>AC Repair</span><span>₹1200</span></div>
+<div class="row"><span>Wheel Alignment</span><span>₹600</span></div>
+<div class="row"><span>Engine Diagnostics</span><span>₹800</span></div>
+</div>
+</div>
+
+<div class="section">
+<div class="card">
+<div class="title">Workshop Photos</div>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537">
+<img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9">
+<img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f">
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="card">
+<div class="title">Location</div>
+<iframe width="100%" height="260" style="border:0;border-radius:8px"
+src="https://maps.google.com/maps?q=Kapoor%20Motors%20Lucknow&output=embed"></iframe>
+</div>
+</div>
+
+<div class="section">
+<div class="card">
+<div class="title">Book Service</div>
+<input id="name" placeholder="Your Name">
+<input id="car" placeholder="Car Model">
+<textarea id="msg" placeholder="Service Details"></textarea>
+<button onclick="sendWA()">Send Booking on WhatsApp</button>
+</div>
+</div>
+
+<div class="viewer" onclick="this.style.display='none'">
+<img id="viewerImg">
+</div>
+
+<a class="callbtn" href="tel:08460307793">📞</a>
+<a class="whatsapp" href="https://wa.me/918460307793">💬</a>
+
+<div class="bottomNav">
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Price</a>
+<a href="#">Map</a>
+<a href="#">Contact</a>
+</div>
+
+<footer>© 2026 Kapoor Motors</footer>
+
+<script>
+/* Scroll Animation */
+document.querySelectorAll('.section').forEach(sec=>{
+window.addEventListener('scroll',()=>{
+if(sec.getBoundingClientRect().top<window.innerHeight-80){
+sec.classList.add('show');
+}
+});
+});
+
+/* Image Popup Viewer */
+document.querySelectorAll('.gallery img').forEach(img=>{
+img.onclick=()=>{
+document.querySelector('.viewer').style.display='flex';
+document.getElementById('viewerImg').src=img.src;
+};
+});
+
+/* WhatsApp Booking */
+function sendWA(){
+let name=document.getElementById('name').value;
+let car=document.getElementById('car').value;
+let msg=document.getElementById('msg').value;
+
+let text=`Booking Request%0AName: ${name}%0ACar: ${car}%0ADetails: ${msg}`;
+window.open("https://wa.me/918460307793?text="+text);
+}
+</script>
+
+</body>
+</html>
