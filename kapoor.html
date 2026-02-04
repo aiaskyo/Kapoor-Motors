@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kapoor Motors Premium</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#020617;color:white}
+
+/* NEON NAVBAR */
+header{
+position:fixed;
+top:0;width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:rgba(0,0,0,.7);
+backdrop-filter:blur(12px);
+box-shadow:0 0 15px rgba(255,0,0,.4);
+z-index:999;
+}
+header h1{color:#ff2b2b}
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+transition:.3s;
+}
+nav a:hover{color:#ff2b2b;text-shadow:0 0 8px red}
+
+/* HERO SLIDER */
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background-size:cover;
+animation:slider 15s infinite;
+}
+@keyframes slider{
+0%{background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7')}
+50%{background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70')}
+100%{background-image:url('https://images.unsplash.com/photo-1542362567-b07e54358753')}
+}
+
+.hero h2{font-size:48px;background:rgba(0,0,0,.5);padding:20px;border-radius:12px}
+
+/* TABS */
+.tabs{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:20px;
+background:#000;
+position:sticky;
+top:60px;
+z-index:10;
+}
+.tabs a{
+color:white;
+text-decoration:none;
+padding:8px 14px;
+border-radius:6px;
+transition:.3s;
+}
+.tabs a:hover{background:#ff2b2b}
+
+/* SECTION */
+.section{
+padding:80px 40px;
+max-width:1100px;
+margin:auto;
+}
+.title{color:#ff2b2b;font-size:28px;margin-bottom:20px}
+
+/* GLASS CARD */
+.card{
+background:rgba(255,255,255,0.06);
+padding:25px;
+border-radius:14px;
+backdrop-filter:blur(14px);
+box-shadow:0 0 25px rgba(255,0,0,.2);
+margin-top:15px;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+.service{
+background:rgba(255,255,255,.05);
+padding:20px;
+border-radius:10px;
+text-align:center;
+transition:.3s;
+}
+.service:hover{
+background:linear-gradient(45deg,#ff0000,#ff4b4b);
+transform:translateY(-6px);
+}
+
+/* PRICE LIST */
+.row{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+/* FORM */
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:8px;
+}
+.btn{
+background:linear-gradient(45deg,#ff0000,#ff4b4b);
+color:white;
+border:none;
+padding:12px;
+margin-top:10px;
+cursor:pointer;
+}
+
+/* CONTACT */
+.contact p{margin-top:8px}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+padding:16px;
+border-radius:50%;
+text-decoration:none;
+}
+
+/* FOOTER */
+footer{text-align:center;padding:20px;background:#000}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>KAPOOR MOTORS</h1>
+<nav>
+<a href="#overview">Overview</a>
+<a href="#price">Price List</a>
+<a href="#booking">Booking</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Kapoor Motors Premium Car Service</h2>
+</section>
+
+<div class="tabs">
+<a href="#overview">Overview</a>
+<a href="#price">Price List</a>
+<a href="#booking">Booking</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div class="section" id="overview">
+<div class="title">Our Services</div>
+<div class="services">
+<div class="service">Car Repair & Maintenance</div>
+<div class="service">Car Towing Services</div>
+<div class="service">Premium Car Wash</div>
+<div class="service">AC Repair</div>
+<div class="service">Engine Diagnostics</div>
+<div class="service">Wheel Alignment</div>
+</div>
+</div>
+
+<div class="section" id="price">
+<div class="title">Automobile Repair Price List</div>
+<div class="card">
+<div class="row"><span>Car Wash Service</span><span>₹250</span></div>
+<div class="row"><span>General Service</span><span>₹1500</span></div>
+<div class="row"><span>AC Repair</span><span>₹1200</span></div>
+<div class="row"><span>Wheel Alignment</span><span>₹600</span></div>
+<div class="row"><span>Engine Diagnostics</span><span>₹800</span></div>
+</div>
+</div>
+
+<div class="section" id="booking">
+<div class="title">Book Service</div>
+<div class="card">
+<input type="text" placeholder="Your Name">
+<input type="text" placeholder="Car Model">
+<input type="date">
+<textarea placeholder="Service Details"></textarea>
+<button class="btn">Submit Booking</button>
+</div>
+</div>
+
+<div class="section" id="contact">
+<div class="title">Contact Details</div>
+<div class="card contact">
+<p>📞 08460307793</p>
+<p>📍 Shop No.555/Ga/50, Bara Birwa, Opposite Piccadilly Hotel, Kanpur Road, Lucknow - 226005</p>
+<p>🕒 Open 24 Hrs</p>
+</div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/918460307793">💬</a>
+
+<footer>
+<p>© 2026 Kapoor Motors Service Center</p>
+</footer>
+
+</body>
+</html>
